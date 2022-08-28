@@ -1,0 +1,7 @@
+startup_message off
+vbell off
+hardstatus string "[screen %n%?: %t%?] %h"
+hardstatus alwayslastline " %c | %w"
+pow_detach_msg "Screen session of $LOGNAME $:cr:$:nl:ended."
+defscrollback 65000
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
