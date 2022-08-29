@@ -3,7 +3,7 @@ filetype plugin on
 filetype indent on
 
 let mapleader = " "
-nmap <leader>w :w!<cr>
+nmap <leader><leader> :w!<cr>
 nmap <leader>s :sh<cr>
 nmap <leader>q :q<cr>
 nmap <leader>Q :qa<cr>
