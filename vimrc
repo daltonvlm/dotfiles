@@ -47,4 +47,5 @@ set nohls
 set exrc
 set colorcolumn=80
 set signcolumn=yes
-set cursorline
+
+set belloff=all
