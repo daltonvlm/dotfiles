@@ -45,7 +45,7 @@ set number
 set relativenumber
 set nohls
 set exrc
-set colorcolumn=80
+set colorcolumn=120
 set signcolumn=yes
 
 set belloff=all
