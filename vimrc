@@ -1,51 +1,24 @@
-syntax enable
-filetype plugin on
-filetype indent on
+" To be appended to the end of awesome vimrc (https://github.com/amix/vimrc)
 
 let mapleader = " "
-nmap <leader><leader> :w!<cr>
-nmap <leader>s :sh<cr>
-nmap <leader>q :q<cr>
+nmap <leader>l :set cursorline!<cr>
+
 nmap <leader>Q :qa<cr>
-nmap <leader>c :set cursorline!<cr>
+nmap <leader>q :q<cr>
+nmap <leader><leader> :w!<cr>
 
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+nmap <leader>s :sh<cr>
 
-set encoding=utf8
-set autoread
-
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-set ignorecase
-set smartcase
-set incsearch
-
-set showmatch
-set foldcolumn=1
-
-set nobackup
-set nowb
-set noswapfile
-
-set expandtab
-set smarttab
-set shiftwidth=4
-set tabstop=4
-
-set ai
-set si
-set wrap
+nmap <leader>C :w \| !sudo make clean<cr>
+nmap <leader>c :w \| !make clean<cr>
+nmap <leader>i :w \| !make indent<cr><cr>
+nmap <leader>m :w \| !make<cr>
+nmap <leader>R :w \| !sudo make run<cr>
+nmap <leader>r :w \| !make run<cr>
 
 set laststatus=2
-set number
-set relativenumber
 set nohls
 set exrc
 set colorcolumn=120
-set signcolumn=yes
 
 set belloff=all
