@@ -9,12 +9,12 @@ nmap <leader><leader> :w!<cr>
 
 nmap <leader>s :sh<cr>
 
-nmap <leader>C :w \| !sudo make clean<cr>
-nmap <leader>c :w \| !make clean<cr>
-nmap <leader>i :w \| !make indent<cr><cr>
+nmap <leader>a :w \| !autoreconf -i<cr>
+nmap <leader>c :w \| !./configure<cr>
 nmap <leader>m :w \| !make<cr>
-nmap <leader>R :w \| !sudo make run<cr>
-nmap <leader>r :w \| !make run<cr>
+nmap <leader>i :w \| !make install<cr>
+nmap <leader>p :w \| !make private-clean<cr>
+nmap <leader>r :w \| !./main<cr>
 
 set laststatus=2
 set nohls
