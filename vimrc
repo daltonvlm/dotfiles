@@ -1,5 +1,6 @@
 " To be appended to the end of awesome vimrc (https://github.com/amix/vimrc)
 
+autocmd VimEnter * NERDTree 
 let mapleader = " "
 nmap <leader>l :set cursorline!<cr>
 
