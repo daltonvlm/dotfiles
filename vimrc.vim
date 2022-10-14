@@ -16,7 +16,8 @@ nmap <leader>c :w \| !./configure<cr>
 nmap <leader>m :w \| !make<cr>
 nmap <leader>i :w \| !make install<cr>
 nmap <leader>p :w \| !make private-clean<cr>
-nmap <leader>r :w \| !./main<cr>
+" Set the environment variable main to the executable
+nmap <leader>r :w \| !make && ./$main<cr>
 nmap <leader>f :w \| !indent *.[ch]<cr>
 
 set laststatus=2
