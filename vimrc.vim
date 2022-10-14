@@ -10,6 +10,7 @@ nmap <leader><leader> :w!<cr>
 
 nmap <leader>s :sh<cr>
 
+nmap <leader>b :w \| !autoreconf -i && ./configure && make<cr>
 nmap <leader>a :w \| !autoreconf -i<cr>
 nmap <leader>c :w \| !./configure<cr>
 nmap <leader>m :w \| !make<cr>
