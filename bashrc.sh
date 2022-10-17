@@ -1,21 +1,11 @@
-MY_ROOT=$HOME/root
-MY_ROOT_USR=$MY_ROOT/usr
-MY_ROOT_USR_LOCAL=$MY_ROOT_USR/local
-MY_ROOT_SNAP=$MY_ROOT/snap
+MY_USR=$HOME/usr
 
 MY_PATH="\
 $HOME/bin:\
-$MY_ROOT_USR_LOCAL/sbin:\
-$MY_ROOT_USR_LOCAL/bin:\
-$MY_ROOT_USR/sbin:\
-$MY_ROOT_USR/bin:\
-$MY_ROOT/sbin:\
-$MY_ROOT/bin:\
-$MY_ROOT_USR/games:\
-$MY_ROOT_USR_LOCAL/games:\
-$MY_ROOT_SNAP/bin"
+$MY_USR/sbin:\
+$MY_USR/bin"
 
 PATH="$MY_PATH:$PATH"
 
-export PKG_CONFIG_PATH="$MY_ROOT/lib/pkgconfig:$PKG_CONFIG_PATH"
-export MANPATH="$MY_ROOT/share/man:$MANPATH"
+export PKG_CONFIG_PATH="$MY_USR/lib/pkgconfig:$PKG_CONFIG_PATH"
+export MANPATH="$MY_USR/share/man:$MANPATH"
