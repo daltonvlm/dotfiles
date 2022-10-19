@@ -13,19 +13,19 @@ nmap <leader>S :source ~/.vimrc<cr>
 nmap <leader>l :set cursorline!<cr>
 
 nmap <leader><leader> :w!<cr>
-nmap <leader>Q :wqa<cr>
-nmap <leader>q :wq<cr>
-nmap <leader>s :w \| :sh<cr>
+nmap <leader>Q :qa<cr>
+nmap <leader>q :q<cr>
+nmap <leader>s :sh<cr>
 
 nmap <leader>a :call EnableAutotools()<cr>
 nmap <leader>A :call DisableAutotools()<cr>
 
 function! EnableAutotools()
-    nmap <leader>b :w \| !./clean.sh && autoreconf -i && mkdir -p build && cd build && ../configure && make<cr>
-    nmap <leader>c :w \| !cd build && ../configure<cr>
+    nmap <leader>b :w \| !./clean.sh && autoreconf -i && mkdir -p build && cd build && ../configure --prefix ~/usr && make<cr>
+    nmap <leader>c :w \| !cd build && ../configure --prefix ~/usr<cr>
     nmap <leader>m :w \| !cd build && make<cr>
-    nmap <leader>i :w \| !cd build && sudo make install<cr>
-    nmap <leader>u :w \| !cd build && sudo make uninstall<cr>
+    nmap <leader>i :w \| !cd build && make install<cr>
+    nmap <leader>u :w \| !cd build && make uninstall<cr>
     " Set the environment variable main to the executable
     nmap <leader>r :w \| !cd build && make && ./$main<cr>
     nmap <leader>I :w \| !indent *.[ch] ; rm *.[ch]~<cr><cr>
