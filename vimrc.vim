@@ -21,13 +21,13 @@ nmap <leader>a :call EnableAutotools()<cr>
 nmap <leader>A :call DisableAutotools()<cr>
 
 function! EnableAutotools()
-    nmap <leader>b :w \| !./clean.sh && autoreconf -i && mkdir -p build && cd build && ../configure --prefix ~/usr && make<cr>
-    nmap <leader>c :w \| !cd build && ../configure --prefix ~/usr<cr>
-    nmap <leader>m :w \| !cd build && make<cr>
-    nmap <leader>i :w \| !cd build && make install<cr>
-    nmap <leader>u :w \| !cd build && make uninstall<cr>
+    nmap <leader>b :w \| !./autogen.sh --prefix ~/usr<cr>
+    nmap <leader>c :w \| !./configure --prefix ~/usr<cr>
+    nmap <leader>m :w \| !make<cr>
+    nmap <leader>i :w \| !make install<cr>
+    nmap <leader>u :w \| !make uninstall<cr>
     " Set the environment variable main to the executable
-    nmap <leader>r :w \| !cd build && make && ./$main<cr>
+    nmap <leader>r :w \| !make && ./$main<cr>
     nmap <leader>I :w \| !indent *.[ch] ; rm *.[ch]~<cr><cr>
     nmap <leader>C :w \| !./clean.sh<cr>
 endfunction
