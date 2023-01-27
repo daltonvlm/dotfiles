@@ -57,5 +57,6 @@ function! DisableMake()
     unmap <leader>I
 endfunction
 
-autocmd VimEnter * NERDTree 
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 "call EnableAutotools()
