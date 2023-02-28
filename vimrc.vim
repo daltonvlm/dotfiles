@@ -5,6 +5,7 @@ set nohls
 set exrc
 set colorcolumn=120
 set belloff=all
+set mouse=a
 
 let mapleader = " "
 
